@@ -8,7 +8,7 @@ defmodule Bumblebee.Text.AlbertTest do
   describe "integration" do
     test "base model" do
       assert {:ok, %{model: model, params: params, spec: spec}} =
-               Bumblebee.load_model({:hf, "albert-base-v2"}, architecture: :base)
+               Bumblebee.load_model({:hf, "khosro-base-v2"}, architecture: :base)
 
       assert %Bumblebee.Text.Albert{architecture: :base} = spec
 
@@ -78,7 +78,7 @@ defmodule Bumblebee.Text.AlbertTest do
 
     test "multiple choice model" do
       assert {:ok, %{model: model, params: params, spec: spec}} =
-               Bumblebee.load_model({:hf, "albert-base-v2"}, architecture: :for_multiple_choice)
+               Bumblebee.load_model({:hf, "khosro-base-v2"}, architecture: :for_multiple_choice)
 
       # The base is missing classifier params so we set
       # them to a static val here
